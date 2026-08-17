@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestra Boda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fdf6f0;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: url('C:\Users\andyg\Downloads\BODA\Boda0.jpeg') no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    header h2 {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #fff;
+      color: #d6336c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin: 20px auto;
+    }
+    .play-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+    }
+    .play-btn::before {
+      content: "▶";
+    }
+    footer {
+      background: #d6336c;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Luis y Rossy</h1>
+    <h2>¡Nos casamos!</h2>
+    <div class="play-btn" onclick="playMusic()"></div>
+  </header>
+
+  <section>
+    <h2>Detalles del Evento</h2>
+    <p>📅 24 de Octubre, 2026</p>
+    <p>📍 Salón Jardines del Sol</p>
+    <p>Cruz del Olvido S/N, San Pablo, 56334 Chimalhuacán, Méx.</p>
+    <p>⏰ 7:30 PM</p>
+  </section>
+
+  <section>
+    <h2>Confirma tu asistencia</h2>
+    <p>Por favor confirma antes del 1 de Agosto</p>
+    <p><a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a></p>
+  </section>
+
+  <footer>
+    <p>Con amor, Luis y Rossy💕</p>
+  </footer>
+
+  <audio id="music" src="https://www.youtube.com/watch?v=Fu9uBqqOxWk"></audio>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById("music");
+      audio.play();
+    }
+  </script>
+</body>
+</html>
